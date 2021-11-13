@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        } 
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .nav {
+            display: flex;
+            width: 100%;
+            align-items:center;
+            justify-content:space-between;
+            padding:2rem 5rem;
+
+        }
+        .nightmode {
+            display: flex;
+            cursor: pointer;
+        }
+        .moon {
+            width: 25px;
+            margin-right: 10px;
+        }
+        .container {
+            background-color: hsla(0, 1%, 61%, 0.39);
+            width: 100%;
+            display:flex;
+            justify-content:center;
+        }
+        .search-bar {
+            width: 90%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:center;
+            flex-direction: row;
+        }
+        .search {
+            display:flex;
+            background-color: hsl(0, 0%, 100%);
+            align-items: center;  
+            padding :5px 30px;
+            width: 450px;
+            border-radius:5px;
+            height: 50px;
+
+        }
+        .search-icon {
+            width: 40px;
+        }
+        .search-input {
+            width: 500px;
+            height: 40px;
+            margin-left: 20px;
+            border: none;
+            font-size:25px;
+            outline: none;
+        }
+        .filter {
+            display:flex;
+            align-items:center;   
+            background:hsl(0, 0%, 100%) ;
+            padding: 10px 40px;
+            border-radius:5px;
+            cursor: pointer;
+            position: relative;
+        }
+        .filter-image {
+            width: 15px;
+            margin-left: 5px;
+        }
+        .region {
+            position: absolute;
+            background-color:hsl(0, 0%, 100%);
+            width: 210px;
+            padding: 10px 40px;
+            top: 50px;
+            left:0px;
+            border-radius:5px;
+            display: none;
+        }
+        li{
+            list-style: none;
+            padding: 10px;
+            width: 150px;
+        }
+        li:hover {
+            background-color:rgba(0, 0, 0, 0.048)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #test {
+            color:hsl(209, 23%, 22%)    ;
+            color:hsl(207, 26%, 17%)  ;
+            color:hsl(200, 15%, 8%) ;
+            color:hsl(0, 0%, 52%);
+            color:hsl(0, 0%, 98%);
+            color:hsl(0, 0%, 100%) ;
+        }
+
+    </style>
+
+
+
+
+
+
+
+    
+    <div class="nav">
+        <h1>Where in the world?</h1>
+        <div class="nightmode">
+            <img class='moon' src="./images/moon-regular.svg" alt="" srcset="">
+            <p>Dark mode</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="search-bar">
+            <div class="search">
+                <img class="search-icon" src="./images/search.svg" alt="" srcset="">
+                <input placeholder='Search for country...' class='search-input' type="search" name="" id="">
+            </div>
+            <div class="filter">
+                <p>Filter by Region</p>
+                <img class="filter-image" src="./images/chevron-down-solid.svg" alt="" srcset="">
+                <div class="region">
+                    <ul>
+                        <li>Africa</li>
+                        <li>America</li>
+                        <li>Asia</li>
+                        <li>Europe</li>
+                        <li>Oceania</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lists"></div>
+    </div>
+
+
+
+    <script src="./app.js" defer></script>
+</body>
+</html>
