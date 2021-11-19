@@ -19,19 +19,29 @@
 
         body {
             font-family: 'Nunito Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
         }
 
         .nav {
             display: flex;
-            width: 100%;
+            width: 90%;
             align-items:center;
             justify-content:space-between;
-            padding:2rem 5rem;
+            padding:1rem 0;
+            height: 80px;
 
         }
         .nightmode {
             display: flex;
             cursor: pointer;
+            align-items:center
+        }
+        .choose {
+            display: flex;
+            align-items:center;
+            justify-content:center;
         }
         .moon {
             width: 25px;
@@ -42,15 +52,18 @@
             width: 100%;
             display:flex;
             justify-content:center;
+            align-items:center;
+            flex-direction: column;
         }
         .search-bar {
             width: 90%;
-            height: 150px;
+            height: 80px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items:center;
             flex-direction: row;
+            margin:3rem 0
         }
         .search {
             display:flex;
@@ -81,6 +94,7 @@
             border-radius:5px;
             cursor: pointer;
             position: relative;
+            height: 40px;
         }
         .filter-image {
             width: 15px;
@@ -105,19 +119,53 @@
             background-color:rgba(0, 0, 0, 0.048)
         }
 
+        .all-country {
+            display:grid;
+            width: 90%;
+            grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+            align-items:center;
+            justify-items:center;
+            gap:5rem; 
+        }
 
 
 
 
+        .lists {
+            width: 250px;
+            background-color:hsl(0, 0%, 100%);
+            border-radius:10px;
+            overflow:hidden;
+        }
 
+        .lists img {
+            width:100%;
+            height:10rem;
+            object-fit: cover;
+        }
 
+        img {
+            width: 250px;
+            height: 200px;
+            
+        }
 
+        .country {
+            margin:25px 0 25px 10px;
+            font-weight: 900;
+            letter-spacing:2px;
 
+        }
 
+        .population, .regions,.capital {
+            margin:0 0 5px 10px;
+            font-weight: 550;
+            letter-spacing:1px;
+        }
 
-
-
-
+        .capital {
+            margin-bottom: 50px;
+        }
 
 
 
@@ -172,7 +220,9 @@
                 </div>
             </div>
         </div>
-        <div class="lists"></div>
+        <div id ='all-country' class="all-country">
+        </div>
+        
     </div>
 
 
