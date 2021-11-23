@@ -2,7 +2,6 @@ fetch("https://restcountries.com/v2/all")
 .then((response) => response.json())
 .then((data) => this.countries(data));
 
-let bod = document.getElementById('nav')
 let dark = document.getElementById('light')
 let cont = document.getElementById('container')
 let sear = document.getElementById('sear')
@@ -10,6 +9,41 @@ let dear = document.getElementById('search')
 var filter = document.getElementById('filter')
 var filreg = document.getElementById('filter-region')
 let lists = document.getElementsByClassName('lists')
+
+function test(){
+
+    
+    for(let i = 0 ; i < lists.length; i++) {
+        
+        
+        
+        // if (gg = test()) {
+        //     console.log('test')
+        // }
+        
+        
+        
+
+        var gg = document.getElementById(`"list${i}"`)
+        console.log(gg)
+    }
+
+    // console.log(lists)
+
+
+}
+// document.addEventListener("click", function() {
+    
+
+
+// }) 
+
+
+
+
+
+
+
 
 function countries(data) {
     for (var i = 0; i < 250; i++) {
@@ -23,6 +57,7 @@ function countries(data) {
         
         var create = document.createElement("div")
         create.setAttribute("class", "lists")
+        create.setAttribute('onclick' , 'test()')
         create.setAttribute('id', `"list${[i]}"`)
         container.appendChild(create)
         
