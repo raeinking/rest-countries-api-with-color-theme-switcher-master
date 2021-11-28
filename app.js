@@ -10,34 +10,11 @@ var filter = document.getElementById('filter')
 var filreg = document.getElementById('filter-region')
 let lists = document.getElementsByClassName('lists')
 
-function test(){
-
+// window.addEventListener("click", (e) => {
+//     const test = e.target.tagName
+//     console.log(test)
     
-    for(let i = 0 ; i < lists.length; i++) {
-        
-        
-        
-        // if (gg = test()) {
-        //     console.log('test')
-        // }
-        
-        
-        
-
-        var gg = document.getElementById(`"list${i}"`)
-        console.log(gg)
-    }
-
-    // console.log(lists)
-
-
-}
-// document.addEventListener("click", function() {
-    
-
-
-// }) 
-
+// })
 
 
 
@@ -57,7 +34,6 @@ function countries(data) {
         
         var create = document.createElement("div")
         create.setAttribute("class", "lists")
-        create.setAttribute('onclick' , 'test()')
         create.setAttribute('id', `"list${[i]}"`)
         container.appendChild(create)
         
@@ -112,7 +88,7 @@ function search_names() {
 dark.addEventListener('click', function() {
     for(let v = 0 ; v < lists.length; v++) {
         let lisa = document.getElementById(`"list${[v]}"`)
-        lisa.classList.toggle('dark-mode-list')            
+        lisa.classList.toggle('dark-mode-list')
     }
     
     cont.classList.toggle('dark-mode-container')
